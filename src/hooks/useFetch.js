@@ -1,23 +1,28 @@
-import {useState, useEffect} from 'react'
+import { useState, useEffect } from "react";
 
-const useFetch = (query) => {
+const useFetch = query => {
   const [data, setData] = useState(false);
   const [fetchError, setFetchError] = useState(false);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if (query) {
-      setLoading(true)
+      setLoading(true);
       const fetchData = async () => {
         try {
           const response = await fetch(
             `https://movie-database-imdb-alternative.p.rapidapi.com/?${query}`,
             {
-              method: 'GET',
+              method: "GET",
+              /* Yes, I know this is a bad practice,
+              but just to demonstrate the use of the API key, and show you the
+              working app.
+              This should not be stored in plain text in a public repo */
               headers: {
-                'x-rapidapi-key': '9a579a7b65mshc011381c3db4f66p10d434jsn8ff55a2580a8',
-                'x-rapidapi-host':
-                  'movie-database-imdb-alternative.p.rapidapi.com',
+                "x-rapidapi-key":
+                  "9a579a7b65mshc011381c3db4f66p10d434jsn8ff55a2580a8",
+                "x-rapidapi-host":
+                  "movie-database-imdb-alternative.p.rapidapi.com",
               },
             }
           );
@@ -37,8 +42,8 @@ const useFetch = (query) => {
       };
       fetchData();
     }
-  }, [query])
-  return [data, fetchError, loading]
-}
+  }, [query]);
+  return [data, fetchError, loading];
+};
 
-export default useFetch
+export default useFetch;

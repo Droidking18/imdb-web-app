@@ -1,5 +1,4 @@
-import styled, { css } from 'styled-components';
-// import { Link } from 'gatsby';
+import styled, { css } from "styled-components";
 
 export const TableContainer = styled.div`
   position: relative;
@@ -7,7 +6,7 @@ export const TableContainer = styled.div`
   margin: 25px auto auto;
   overflow-x: auto;
   font-size: 0.7em;
-  @media screen and (min-width: ${({theme}) => theme.mobileMenu}) {
+  @media screen and (min-width: ${({ theme }) => theme.mobileMenu}) {
     /* width: 80%; */
     font-size: 0.9em;
   }

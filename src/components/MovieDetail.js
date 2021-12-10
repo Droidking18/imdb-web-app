@@ -1,22 +1,25 @@
-import React from 'react';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
-import Table from 'react-bootstrap/Table';
-import styled from 'styled-components';
+import React from "react";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
+import Table from "react-bootstrap/Table";
+import styled from "styled-components";
 
 const Td = styled.td`
   font-weight: bold;
 `;
 
 const MovieDetail = ({ movieData }) => {
-
   return (
     <Row>
       <Col md={12} lg={4}>
-        <img src={movieData.Poster} alt={movieData.Title} style={{ width: '100%' }} />
+        <img
+          src={movieData.Poster}
+          alt={movieData.Title}
+          style={{ width: "100%" }}
+        />
       </Col>
       <Col md={12} lg={4}>
-        <Table striped hover size='sm'>
+        <Table striped hover size="sm">
           <tbody>
             <tr>
               <Td>{`Year: `}</Td>

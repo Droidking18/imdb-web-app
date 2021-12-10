@@ -1,14 +1,14 @@
-import React from 'react';
-import Skeleton from 'react-loading-skeleton';
-import Table from 'react-bootstrap/Table';
-import { Td } from './ListTable';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Card from 'react-bootstrap/Card';
-import ListGroup from 'react-bootstrap/ListGroup';
-import ListGroupItem from 'react-bootstrap/ListGroupItem';
-import imagePlaceHolder from '../images/movie_poster_placeholder.29ca1c87.svg';
-import styled, {keyframes} from 'styled-components';
+import React from "react";
+import Skeleton from "react-loading-skeleton";
+import Table from "react-bootstrap/Table";
+import { Td } from "./ListTable";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Card from "react-bootstrap/Card";
+import ListGroup from "react-bootstrap/ListGroup";
+import ListGroupItem from "react-bootstrap/ListGroupItem";
+import imagePlaceHolder from "../images/movie_poster_placeholder.29ca1c87.svg";
+import styled, { keyframes } from "styled-components";
 
 export const MovieDetailSkeleton = () => {
   return (
@@ -17,7 +17,7 @@ export const MovieDetailSkeleton = () => {
         <Skeleton height={450} />
       </Col>
       <Col md={12} lg={4}>
-        <Table striped hover size='sm'>
+        <Table striped hover size="sm">
           <tbody>
             <tr>
               <Td>{`Year: `}</Td>
@@ -108,7 +108,7 @@ export const ListSkeleton = () => {
   for (let i = 0; i < 10; i++) {
     rows.push(
       <tr key={`LSR-${i}`}>
-        <Td style={{ textAlign: 'center' }}>
+        <Td style={{ textAlign: "center" }}>
           <Skeleton height={150} width={100} />
         </Td>
         <Td>
@@ -125,7 +125,7 @@ export const ListSkeleton = () => {
   }
 
   return (
-    <Table hover size='sm' style={{ maxWidth: '90vw' }}>
+    <Table hover size="sm" style={{ maxWidth: "90vw" }}>
       <tbody>{rows}</tbody>
     </Table>
   );
@@ -138,36 +138,36 @@ const fadeInOut = keyframes`
   100% {
     opacity: 1;
   }
-`
+`;
 
 const CardImgAnimated = styled(Card.Img)`
   animation: ${fadeInOut} 2s ease-in-out infinite both;
-`
+`;
 
 export const CardViewSkeleton = () => {
   return (
     <Card
-      className='m-2'
+      className="m-2"
       style={{
-        display: 'block',
+        display: "block",
         padding: 0,
-        width: '300px',
-        boxShadow: '1px 1px 5px rgba(0, 0, 0, 0.1)',
+        width: "300px",
+        boxShadow: "1px 1px 5px rgba(0, 0, 0, 0.1)",
       }}
     >
-      <CardImgAnimated variant='top' src={imagePlaceHolder} />
+      <CardImgAnimated variant="top" src={imagePlaceHolder} />
       <Card.Body>
         <Card.Title>
           <Skeleton />
         </Card.Title>
       </Card.Body>
-      <ListGroup className='list-group-flush'>
+      <ListGroup className="list-group-flush">
         <ListGroupItem>
-          <span style={{ fontWeight: 'bold' }}>{`Type: `}</span>
+          <span style={{ fontWeight: "bold" }}>{`Type: `}</span>
           <Skeleton />
         </ListGroupItem>
         <ListGroupItem>
-          <span style={{ fontWeight: 'bold' }}>{`Year: `}</span>
+          <span style={{ fontWeight: "bold" }}>{`Year: `}</span>
           <Skeleton />
         </ListGroupItem>
       </ListGroup>

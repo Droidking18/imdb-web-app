@@ -1,4 +1,4 @@
-import { createStore, action, persist } from 'easy-peasy';
+import { createStore, action, persist } from "easy-peasy";
 
 export const store = createStore(
   persist({
@@ -14,7 +14,7 @@ export const store = createStore(
       return {
         ...state,
         favourites: state.favourites.filter(
-          (fav) => fav.imdbID !== payload.imdbID
+          fav => fav.imdbID !== payload.imdbID
         ),
       };
     }),

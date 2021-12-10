@@ -1,9 +1,9 @@
-import React, { useContext } from 'react';
-import Table from 'react-bootstrap/Table';
-import styled from 'styled-components';
-import imagePlaceHolder from '../images/movie_poster_placeholder.29ca1c87.svg';
-import { AppContext } from '../App';
-import { useStoreState } from 'easy-peasy';
+import React, { useContext } from "react";
+import Table from "react-bootstrap/Table";
+import styled from "styled-components";
+import imagePlaceHolder from "../images/movie_poster_placeholder.29ca1c87.svg";
+import { AppContext } from "../App";
+import { useStoreState } from "easy-peasy";
 
 export const Td = styled.td`
   vertical-align: middle;
@@ -12,22 +12,22 @@ const ListTable = ({ headings, setShowDetails }) => {
   const { data, showFavs } = useContext(AppContext);
   let sortedArray = [];
 
-  const favourites = useStoreState(state => state.favourites)
+  const favourites = useStoreState(state => state.favourites);
   if (showFavs) {
-    sortedArray = favourites
+    sortedArray = favourites;
   } else {
-    sortedArray = data.Search
+    sortedArray = data.Search;
   }
 
   return (
     <>
-      <Table striped hover size='sm'>
+      <Table striped hover size="sm">
         <thead>
           <tr>
             {headings.map((heading, idx) => {
               return (
                 <th
-                  style={{ textAlign: idx === 0 ? 'center' : 'left' }}
+                  style={{ textAlign: idx === 0 ? "center" : "left" }}
                   key={`heading-${idx}-${heading}`}
                 >
                   {heading}
@@ -41,14 +41,14 @@ const ListTable = ({ headings, setShowDetails }) => {
             return (
               <tr
                 key={movie.imdbID}
-                role='button'
+                role="button"
                 tabIndex={0}
                 onClick={() => setShowDetails(movie)}
               >
-                <Td style={{ textAlign: 'center' }}>
+                <Td style={{ textAlign: "center" }}>
                   <img
                     src={
-                      movie.Poster.slice(0, 4) === 'http'
+                      movie.Poster.slice(0, 4) === "http"
                         ? movie.Poster
                         : imagePlaceHolder
                     }
@@ -56,7 +56,7 @@ const ListTable = ({ headings, setShowDetails }) => {
                     style={{
                       width: 100,
                       height: 150,
-                      boxShadow: '1px 1px 5px rgba(0, 0, 0, 0.1)',
+                      boxShadow: "1px 1px 5px rgba(0, 0, 0, 0.1)",
                     }}
                   />
                 </Td>
