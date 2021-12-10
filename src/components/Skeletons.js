@@ -107,7 +107,7 @@ export const ListSkeleton = () => {
 
   for (let i = 0; i < 10; i++) {
     rows.push(
-      <tr key={`LSR-${i}`}>
+      <tr key={`skeletonlist${i}`}>
         <Td style={{ textAlign: "center" }}>
           <Skeleton height={150} width={100} />
         </Td>

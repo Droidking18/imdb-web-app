@@ -62,6 +62,9 @@ const ListTable = ({ headings, setShowDetails }) => {
                 </Td>
                 <Td>{movie.Title}</Td>
                 <Td>{movie.Type}</Td>
+                {/* This is a stupid fix because I
+                didn't like how if a show is current
+                it shows `2010-` */}
                 <Td>{movie.Year?.replace(/–$/, "–Current")}</Td>
               </tr>
             );

@@ -23,7 +23,7 @@ const MovieDetail = ({ movieData }) => {
           <tbody>
             <tr>
               <Td>{`Year: `}</Td>
-              <td>{movieData.Year}</td>
+              <td>{movieData.Year?.replace(/–$/, "–Current")}</td>
             </tr>
             <tr>
               <Td>{`Rated: `}</Td>
