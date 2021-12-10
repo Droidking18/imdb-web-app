@@ -62,7 +62,7 @@ const ListTable = ({ headings, setShowDetails }) => {
                 </Td>
                 <Td>{movie.Title}</Td>
                 <Td>{movie.Type}</Td>
-                <Td>{movie.Year}</Td>
+                <Td>{movie.Year?.replace(/–$/, "–Current")}</Td>
               </tr>
             );
           })}

@@ -25,7 +25,7 @@ const DisplayResults = () => {
             <Form.Check
               type="switch"
               id="custom-switch"
-              label={`Toggle ${cardView ? "List View" : "Card View"}`}
+              label={"Card view"}
               checked={cardView}
               onChange={() => setCardView(!cardView)}
             />
