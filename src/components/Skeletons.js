@@ -7,7 +7,7 @@ import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import ListGroupItem from "react-bootstrap/ListGroupItem";
-import imagePlaceHolder from "../images/movie_poster_placeholder.29ca1c87.svg";
+import imagePlaceHolder from "../images/movie_poster.svg";
 import styled, { keyframes } from "styled-components";
 
 export const MovieDetailSkeleton = () => {

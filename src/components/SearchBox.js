@@ -16,7 +16,13 @@ const SearchBox = ({
   favClickHandler,
 }) => {
   return (
-    <Row className="" style={{ backgroundColor: "whitesmoke", paddingTop: 10 }}>
+    <Row
+      style={{
+        backgroundColor: "whitesmoke",
+        paddingTop: 10,
+        alignSelf: "center",
+      }}
+    >
       <ColStyled className="mb-2" fluid="sm" md={3}>
         <Form onSubmit={submitHandler}>
           <Form.Group>
@@ -40,7 +46,18 @@ const SearchBox = ({
           </Form.Group>
         </Form>
       </ColStyled>
-      <ColStyled className="text-end" fluid="sm" md={5} lg={4}>
+      <ColStyled
+        className="text-end"
+        fluid="sm"
+        md={5}
+        lg={4}
+        style={{
+          alignItems: "center",
+          justifyContent: "center",
+          display: "flex",
+          marginBottom: "10px",
+        }}
+      >
         <Button
           variant={showFavs ? "outline-success" : "outline-primary"}
           onClick={favClickHandler}
