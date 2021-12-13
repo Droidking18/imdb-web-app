@@ -40,7 +40,7 @@ I hope you have fun with this assignment and feel free to do styling and layouts
 
 - I have never worked with Easy-peasy state management, nor Redux as our app just doesn't use it. This was a little difficult so I had to spend some time making it work.
 
-- Our app is built in class based components (Apparently functional is too new and will confuse people ¯\_(ツ)_/¯). I have built some smaller things in functional react with hooks, but I usually fall back to class based because I'm used to it.
+- Our app is built in class based components (Apparently functional is too new and will confuse people ¯\\_(ツ)_/¯). I have built some smaller things in functional react with hooks, but I usually fall back to class based because I'm used to it.
 
 - Because of time contstraints I felt like my file structure was a little messy, so I'd have given that a bit of a clean up. I also maybe would have made it prettier, but I didn't spend much time on non-functional features of the app. I did however try to make it as responsive as posible as I believe that is a key feature.
 
